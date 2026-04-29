@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>User form</legend>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="my_name">
+            </div>
+            <br><br>
+            <div>
+                <label for="age">Age</label>
+                <input type="number" id="my_age">
+            </div>
+            <br><br>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="my_email">
+            </div>
+            <br><br>
+            <div>
+                <label for="address">address</label>
+                <textarea name="address" id="my_address"></textarea>
+            </div>
+            <br><br>
+            <button id="sbtn">Submit</button>
+            <button id="rbtn">Reset</button>
+        </fieldset>
+    </form>
+    <h3 id="p_name"></h3>
+    <h3 id="p_age"></h3>
+    <h3 id="p_email"></h3>
+    <h3 id="p_address"></h3>
+
+    <script>
+        document.getElementById("sbtn").onclick= function(event)
+    
+           {
+             event.preventDefault();
+
+            let name = document.getElementById("my_name").value;
+            let age = document.getElementById("my_age").value;
+            let email = document.getElementById("my_email").value;
+            let address = document.getElementById("my_address").value;
+
+            document.getElementById("p_name").innerText= `Name: ${name}`;
+            document.getElementById("p_age").innerText= `Age: ${age}`;
+            document.getElementById("p_email").innerText= `Emaill: ${email}`;
+            document.getElementById("p_address").innerText= `Address: ${address}`;
+
+            document.getElementById("my_name").value="";
+            document.getElementById("my_age").value ="";
+            document.getElementById("my_email").value ="";
+            document.getElementById("my_address").value="";
+
+
+             
+              
+
+           }
+       
+    </script>
+
+
+
+
+</body>
+
+</html>

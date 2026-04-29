@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Form</title>
+</head>
+
+<body>
+    <!--  <label for="result">Enter your result</label><br>
+    <input type="text" name="result" id="result"><br><br>
+    <button id="btn">Submit</button> -->
+
+    <form action="" id="form_id">
+       A: <input type="number" id="a"> <br><br>
+       B: <input type="number" id="b"><br><br>
+       C: <input type="number" id="c"><br><br>
+       <button onclick="findLargest()">Submit</button>
+        <button type="reset " id="btn2">Reset</button>
+    </form>
+  
+    <h2 id="output_id"></h2>
+
+
+    
+    <script> 
+    // let large;
+function findLargest(){
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+
+
+    if(a>b && a>c){
+       document.getElementById(output_id).innerText= (` ${a} is largest`);
+    }else if(b>a && b>c){
+         document.getElementById(output_id).innerText= (` ${b} is largest`);
+    }else{
+        document.getElementById(output_id).innerText= (` ${c} is largest`);
+    }
+    // output_id.innerText=(`The ${largest} is big.`);
+        
+    }
+    
+
+
+
+
+    // let a=Number(prompt(" Enter the 1st number"));
+    // let b= Number(prompt(" Enter the 2nd number"));
+    // let c=Number(prompt(" Enter the 3rd number"));
+
+
+
+
+
+
+// if(a>b ){
+//         if (a>c){
+//          console.log("A is the biggest number");
+//          } else{
+//           console.log(" C is the biggest number");
+//          }
+// }else if (b>a){
+//         if(b>c){
+//          console.log(" B is the biggest number");
+//         }else{
+//          console.log(" C is the biggest number");
+//         }
+
+// }
+
+
+
+
+
+
+// if(a>b && a>c){
+//    console.log(`${a} is the biggest number among ${a}, ${b}, ${c}`);
+// }else if (b>a && b>c){
+//           console.log(`${b} is the biggest number among ${a}, ${b}, ${c}}`);
+ 
+// }else{
+//    console.log(`${c} is the biggest number among ${a}, ${b}, ${c}`);
+// }
+       
+
+
+
+
+
+
+
+
+
+
+
+ 
+    //     document.getElementById("btn").onclick = function () {
+    //         let result = Number(document.getElementById("result").value);
+    //         alert
+    //         let output = document.getElementById("output_id");
+        
+    //     if (result >= 80 && result <= 100) {
+    //         output.innerText = "A+";
+    //     } else if (result >= 70) {
+    //         output.innerText = "A";
+    //     } else if (result >= 60) {
+    //         output.innerText = "A-";
+    //         console.log(result)
+    //     } 
+    // }
+
+
+// document.getElementById(btn).onsubmit function(e){
+//     e .preventDefault();
+
+//     let largest = Number (document.getElementById("output_id") value);
+//     if(a>b && a>c){
+//         output_id.innerText=("largest");
+//     }
+// } -->
+
+
+ </script>
+
+
+
+</body>
+
+</html> 

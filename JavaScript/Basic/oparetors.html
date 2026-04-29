@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oparetors</title>
+    <style>
+        #increment_id{
+            background-color: cadetblue;
+            color: rgb(22, 3, 3);
+            padding: 2px;
+            border-radius: 5px 0px 5px 0px;
+        }
+         #increment_id:hover{
+            background-color: rgb(170, 205, 206);
+            color: rgb(22, 3, 3);
+            padding: 2px;
+            border-radius: 5px 0px 5px 0px;
+        }
+         #decrement_id{
+            background-color:rgb(174, 223, 101); 
+            color: rgb(22, 3, 3);
+            padding: 2px;
+            border-radius: 5px 0px 5px 0px;
+        }
+         #decrement_id:hover{
+            background-color: rgb(213, 238, 193);
+            color: rgb(22, 3, 3);
+            padding: 2px;
+            border-radius: 5px 0px 5px 0px;
+        }
+        #reset_id{
+            background-color:rgb(223, 80, 80); 
+            color: rgb(22, 3, 3);
+            padding: 2px;
+            border-radius: 0px 5px 0px 5px;
+        }
+         #reset_id:hover{
+            background-color: rgb(240, 155, 162);
+            color: rgb(22, 3, 3);
+            padding: 2px;
+            border-radius: 5px 0px 5px 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="counter_value">0</h1>
+    <button id="increment_id">Increment</button>
+    <button id="reset_id">Reset</button>
+    <button id="decrement_id">Decrement</button>
+
+    <script>
+
+       let counter=0;
+       let counter_value = document.getElementById("counter_value");
+       let increment = document.getElementById("increment_id");
+        let reset = document.getElementById("reset_id");       
+       let decrement = document.getElementById("decrement_id");
+
+       increment.onclick= function () {
+        counter++;
+        counter_value.innerText= counter;
+       }
+
+       decrement.onclick= function(){
+        counter--;
+        counter_value.innerText= counter;
+       }
+      reset.onclick=function(){
+        counter=0;
+        counter_value.innerText=counter;
+      }
+
+
+
+
+
+
+
+
+ let x = 20;
+        let y = 10;
+        let z = x + y;
+        z = x - y;
+        z = x * y;
+        z = x / y;
+        z = x % y;
+
+        console.log(z);
+
+    </script>
+
+
+
+</body>
+
+</html>

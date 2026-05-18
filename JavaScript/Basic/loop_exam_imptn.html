@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+    <!-- ***********Exam Impotant question************ -->
+    <h1>Prime Number</h1>
+    <label for="num">Enter a Number :</label> <br><br>
+    <input type="number" name="num" id="number"><br><br>
+    <button id="btn" onclick="abc()">Submit</button>
+
+    <h1 id="result"></h1>
+
+
+    <script>
+        function abc(){
+          let inputValue =Number (document.querySelector("#number").value);
+          let output = document.querySelector("#result");
+
+            function isPrime(number){
+                if(number < 2){
+                    return false;
+                }
+           for( let i =2; i<number; i++){
+            if(number % i == 0){
+                return false
+            }
+           }return true;
+           
+            }
+           output.innerText= isPrime(inputValue) ? `${inputValue} is a prime number`: ` ${inputValue} is not a prime number`;
+
+       }
+        
+
+
+
+
+
+
+
+
+        // for (let i = 1; i <= 100; i++) {
+        //     console.log(`${i} I love BD`);
+        // }
+        // for (let i = 100; i >= 1; i--) {
+        //     console.log(`${i} I love Aammi Jaan`);
+        // }
+
+
+        // let i=1;
+        // while(i<=50){
+
+        //     console.log(i);
+        //     i++;
+        // }
+        // let p=50;
+        // while(p>=1){
+
+        //     console.log(p);
+        //     p--;
+        // }
+
+
+        // let j=1;
+        // do{ 
+        //     console.log(`${j} Hi`);
+        //     j++            
+        // }while( j<=50)
+
+
+
+
+
+        // let password = "1234";
+        // let input="";
+        // let times= 3;
+        // while(input != password){
+        //     input = prompt(` Enter your password. You've ${times} chance.`);
+        //     times--;
+        //     if (times ==0){
+        //         alert("You've entered wrong password to many times")
+        //         break;
+        //     }
+        // }
+
+
+        // let foods=[];
+        // let input="";
+        // do{
+        //     input=prompt(" Enter your food name");
+        //     if(input != "exit"){
+        //      foods.push(input)   
+        //     }
+
+        // }while(input != "exit")
+        // console.log(foods);
+
+
+
+        // let students = ["HASAN", "KHALID", "MAHMUD"]
+        // students.forEach(student => {
+        //     console.log(student);
+        //     // document.write(`<p> Name: ${student}`);
+
+        // });
+
+        // let fnum = Number( prompt( " Pleae, Enter a number."));
+        // let result = 1;
+        // for( i =1; i<=fnum; i++){
+        //     result *= i;
+            
+        //             }
+
+        // console.log(result);
+
+        // 1 prime number is divisible with 0
+
+        // 
+        //   let num= Number( prompt("give me a number "));
+
+        //     function isPrime(num){
+            
+        //     for( e =2; e<num; e++ ){
+                
+        //         if(num % e == 0 ){
+        //          return  console.log(` ${num} is not a Prime number`);
+                          
+        //         }
+        //     } return console.log(` ${num} is  a Prime number`);
+        
+        //     }
+                       
+        //     isPrime( num)       
+
+    //   let number= Number( prompt("give me a number "));
+
+    //  function isPrime(number){
+
+    //      for(let i =2; i < number ; i++){
+    //        if(number % i == 0){
+    //           return false
+    //        }  
+    //   }
+      
+    //   return true
+    //  }
+     
+    //    console.log(isPrime(number));
+       
+
+    </script>
+</body>
+
+</html>

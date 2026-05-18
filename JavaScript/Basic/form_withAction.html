@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form using Javascript</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+        </div><br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div><br>
+        <div>
+            <label for="city">City:</label>
+            <select name="city" id="city">
+                <option value="Dhaka">Dhaka</option>
+                <option value="Khulna">Khulna</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Barishal">Barishal</option>
+            </select>
+        </div><br>
+        <div class="radio">
+            <label for="gender">Gender:</label><br>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div><br>
+        <div>
+            <label for="subject">Subject:</label>
+            <input type="checkbox" name="subject" id="Bangla" value="Bangla" >
+            <label for="Bangla">Bangla</label>
+            <input type="checkbox" name="subject" id="english" value="English">
+            <label for="english">English</label>
+            <input type="checkbox" name="subject" id="math" value="Math">
+            <label for="math">Math</label>
+            <input type="checkbox" name="subject" id="physics" value="Physics">
+            <label for="physics">Physics</label>
+
+        </div><br>
+        <div>
+            <label for="comment">comment:</label>
+            <textarea name="comment" id="comment"></textarea>
+        </div><br>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+
+        let form = document.getElementById("form");
+        form.onsubmit = function (event) {
+            event.preventDefault();
+            let name = form.name.value;
+            let email = form.email.value;
+            let city = form.city.value;
+            let genders = form.gender;
+            let selected_gender = "";
+            let subjects = form.subject;
+            let selected_subject = "";
+            let comment = form.comment.value;
+
+
+            for (gender of genders) {
+                if (gender.checked) {
+                    selected_gender = gender.value;
+                }
+            }
+
+            for (subject of subjects) {
+                if (subject.checked) {
+                    selected_subject += `${subject.value},`
+                }
+            }
+
+
+            let w = window.open("", "_blank", " width=200, height=200");
+            w.document.write(` <h4> Name: ${name} </h4>`);
+            w.document.write(` <p>  <b>Email:</b> ${email} </p>`);
+            w.document.write(` <p> <b> City: </b> ${city} </p>`);
+            w.document.write(` <p> <b> Gender: </b> ${selected_gender} </p>`);
+            w.document.write(` <p> <b> Subjects </b>: ${selected_subject} </p>`);
+            w.document.write(` <p> <b> Comment: </b> ${comment} </p>`);
+            // w.document.write(` <button onclick = "self.close()"> Close</button>`);
+            // w.document.write(` <button onclick = "print()"> Print</button>`);
+
+
+            console.log(w);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

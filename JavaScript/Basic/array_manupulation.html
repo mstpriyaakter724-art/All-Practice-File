@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maupulation</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>CRUD</h1>
+
+<div class="container">
+    <div class="row gap-3">
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <script>
+        //***************************CRUD************************************
+
+        let NewProduct = { id: 5, name: "Phone", Price: 1500, img: "phone.jpg", qty: 1, description: "Good" };
+
+
+        let products = [
+            { id: 1, name: "Pen", Price: 10, img: "Pen.jpg", qty: 1, description: "Good" },
+            { id: 2, name: "Pencill", Price: 20, img: "Pencill.jpg", qty: 1, description: "Good" },
+            { id: 3, name: "Notebook", Price: 45, img: "Notebook.jpg", qty: 1, description: "Good" },
+            { id: 4, name: "Foodbox", Price: 150, img: "Foodbox.jpg", qty: 1, description: "Good" }
+        ];
+
+        //****************************Read*******************************
+
+        products.forEach((product) => {
+            console.log(product.name, product.Price);
+            document.write(`<h2> ${product.name} ${product.Price}`)
+        });
+
+        //***************************Update*****************************
+
+        products = products.map((product) => {
+            if (product.id == 3) {
+                return { ...product, Price: 50 };
+            }
+            return product;
+        })
+
+        console.log(products);
+
+        //**************************Delete***************************
+
+        products = products.filter((product) => {
+            return product.id != 4;
+        });
+
+        console.log("Delete", products);
+
+        //***********************Create*************************
+        products.push(NewProduct);
+        console.log("Create", products);
+        //*****************Altarnative of Push*************************
+
+        products = [ ...products,NewProduct]
+        console.log(products);
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

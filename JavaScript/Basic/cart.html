@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <h1 class="mb-2">CRUD</h1>
+        <button onclick="addProduct(newProduct)" class="btn btn-info mb-2">Add Product</button>
+        <div class="row gap-5 cards_show">
+        </div>
+    </div>
+
+
+    <script>
+
+        let newProduct = { id: 5, name: "Phone", Price: 1500, img: "phone.jpg", qty: 1, description: "Good" };
+
+
+        let products = [
+            { id: 1, name: "Pen", Price: 10, img: "pen.jpg", qty: 1, description: "Good" },
+            { id: 2, name: "Pencil", Price: 20, img: "Pencil.jpg", qty: 1, description: "Good" },
+            { id: 3, name: "Notebook", Price: 45, img: "Notebook.jpg", qty: 1, description: "Good" },
+            { id: 4, name: "Foodbox", Price: 150, img: "Foodbox.jpg", qty: 1, description: "Good" }
+        ];
+
+        printProduct()
+
+        //********Delete************
+        function deleteProduct(id) {
+            products = products.filter((product) => {
+                return product.id != id;
+            });
+            printProduct()
+        }
+
+        function printProduct() {
+            let html = "";
+            products.forEach((product) => {
+                html += `
+                <div class = "col-md-3"
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/${product.img}" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text py-2 "> ${product.Price}</p>
+                        </div>
+                            <div class = "card-footer">
+                                <a href="#" class="btn btn-primary me-2 border rounded">Add To Cart </a>
+                                <a onclick = "deleteProduct(${product.id}) " class="btn btn-danger " >Delete </a>
+                            </div>
+                    </div>
+                </div>
+        `;
+            });
+            document.querySelector(".cards_show").innerHTML = html;
+        }
+
+        //**************Create*****************
+        function addProduct(newProduct) {
+            products.push(newProduct);
+            printProduct();
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

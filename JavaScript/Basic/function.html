@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <!-- <style>
+        .color {
+            color: rgba(247, 15, 85, 0.514);
+        }
+    </style> -->
+</head>
+
+<body>
+
+
+
+    <script>
+        // let a=10;
+        // let b = 20;
+        // let c= 20;
+        // let d= 40;
+        // let z= a+b;
+        // let y = a+b;
+
+        //1. Function Declaration
+
+        // function add(a, b) {
+        //     return a + b;
+        // }
+        // function sub(a, b) {
+        //     return a - b;
+        // }
+        // console.log(add(500, 400), sub(400, 200));
+        // add(500, 400)
+
+        // function fullName(){
+        //     let firstName= "Masud";
+        //     let lastName = "Hasan";   
+        //     console.log(`${ firstName} ${lastName}`); }
+        //     fullName();
+
+        //     function fullName(firstName, lastName) {
+        //         document.write(`<h1 class= "color"> Hello!${firstName} ${lastName} </h1>`);
+        //     }
+        //     fullName("Masud", "Hasan");
+        //     fullName("Rajib", "Hasan");
+        //     fullName("Rakib", "Hasan");
+        //     fullName("Rahul", "Hasan");
+
+        //     function name(name) {
+        //         document.write(`<h3> Assalamu Alaikum , ${name}.`);
+        //     }
+        //     name("Anondo");
+        //     name("Spriha");
+
+
+            function greet(name = "Guest") {
+              return `Assalamu Alaikum ${name}`;  
+            }
+             console.log(greet("Noor"));
+             console.log(greet ());
+             
+
+         
+
+
+        // function calculator(a, op, b) {
+        //     if (op == "+") {
+        //         return a + b;
+        //     } else if (op == "-") {
+        //         return a - b;
+        //     } else if (op == "*") {
+        //         return a * b;
+        //     } else if (op == "/") {
+        //         return a / b;
+        //     }
+        // }
+        // console.log(calculator(200, "+", 300))
+
+        function total_cost(price, quentity) {
+            return price * quentity;
+        }
+        console.log( `${total_cost (1000,3)} Tk` ) ;
+        console.log( total_cost (2345,3)+ "Tk" ) ;
+
+
+        
+        const fullName = ( firstName, lastName)=> {
+            return `${firstName}  ${lastName}`
+        }
+        
+
+         console.log(fullName("Rahat", "Ahamed"));
+
+
+         const name = (firstName)=> firstName;
+         console.log(name ("Tushar"));
+
+         const msg = () => "Hello, Priya.";
+         console.log(msg());
+
+
+
+         
+          function hello (name, callback){
+            return `Hello ${name}.${callback}.`;
+          }
+         function goto (){
+        return "Go to your room"; 
+        }
+        console.log(hello ("Hasan" , goto()));
+
+
+        function hello2 ( name, callback){
+            return ` Ei ${name} ${callback()}`
+        }
+        let output = hello2 ( "Masud", () =>  "Valo hoye jao");
+        console.log(output);
+
+
+     // Recursive function
+
+//      function start (){
+//         setTimeout(() =>{
+//             let date = new Date();
+//             console.log ( date.toLocaleTimeString())
+//             start()            
+//         }, 1000);
+//      }
+        
+// start()
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

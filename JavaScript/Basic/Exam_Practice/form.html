@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div><br><br>
+        <div>
+            <label for="phone">Phone no.</label>
+            <input type="tel" name="phone" id="phone">
+        </div><br><br>
+        <div>
+            <label for="address">Address</label>
+            <textarea name="address" id="address"></textarea>
+        </div><br><br>
+        <div>
+            <label for="city">City:</label>
+            <select name="city" id="city">
+                <option value="dhaka">Dhaka</option>
+                <option value="barishal">Barishal</option>
+                <option value="shariatput">Shariatput</option>
+            </select>
+        </div><br><br>
+        <div>
+            <label for="subject">Subject:</label>
+            <input type="checkbox" name="subject" id="subject" value="Math"> Math
+            <input type="checkbox" name="subject" id="subject" value="English"> English
+            <input type="checkbox" name="subject" id="subject" value="ICT"> ICT
+        </div><br><br>
+        <div>
+            <label for="gender">Gender:</label>
+            <label for="male">
+                <input type="radio" name="gender" id="male" value="male" checked>
+            </label>Male
+            <label for="female">
+                <input type="radio" name="gender" id="female" value="female">
+            </label>Female
+        </div><br><br>
+       Text box <textarea name="text" id="text"></textarea><br>
+        <input type="submit" name="submit" id="btn">
+    </form>
+
+    <script>
+
+
+
+        let form = document.getElementById("form");
+        form.onsubmit = function (event) {           
+            event.preventDefault()
+          
+            let name = form.name.value;
+            let phone = form.phone.value;
+            let address = form.address.value;
+            let city = form.city.value;
+            let subjects = form.subject;
+            let selected_subject = "";
+            let genders = form.gender;
+            let selected_gender = "";
+            let text = form.text.value;
+
+            for (gender of genders) {
+                if (gender.checked) {
+                    selected_gender = gender.value;
+                }
+            }
+
+            for (subject of subjects) {
+                if (subject.checked) {
+                    selected_subject +=  ` ${subject.value}`;
+                }
+            }
+
+
+            let w = window.open(" ", "_blank", "width= 200, hight= 200");
+            w.document.write  (` <h3>Name: ${name} </h3>`);
+            w.document.write ( ` <h4>Phone no: ${phone} </h4>`);
+            w.document.write ( ` <h4>Address: ${address} </h4>`);
+            w.document.write ( ` <h4> City: ${city} </h4>`);
+            w.document.write( ` <h4> Subject: ${selected_subject} </h4>`);
+            w.document.write  (` <h4> Gender: ${selected_gender} </h4>`);
+            w.document.write( ` <h4>Text: ${text} </h4>`);
+            console.log(w);
+            
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

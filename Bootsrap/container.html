@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>container</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <!-- <style>
+        .col1{
+            background-color: aquamarine;
+        }
+        .col2{
+            background-color: rgb(165, 19, 63);
+        }
+        .col3{
+            background-color: rgb(36, 123, 194);
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+
+    </header>
+ <main>
+    <div class="container">
+        <div class="row ">
+            <div class ="col gx-1 col-xxl-3   col-xl-3  col-lg-8   col-md-3  col-sm-12   " >column3</div>
+            <div class ="col gx-1 col-xxl-6   col-xl-3  col-lg-2   col-md-7  col-sm-12   " >column2</div>
+            <div class ="col gx-1 col-xxl-3   col-xl-6  col-lg-2   col-md-2  col-sm-12   " > column1</div>
+        <!-- </div><br><br><br> -->
+        <div class="row mt-3">
+            <div class=" col md-6 ">
+                <img src="images/1004.jpg" alt="image" class="img-fluid  rounded  img-thumbnail">
+            </div>
+            <div class=" col col-md-6">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, recusandae commodi suscipit soluta harum dicta enim sapiente 
+            </div>
+
+        </div>
+           <table class=" mt-2 table table-info table-striped table-hover ">
+            <!-- <table class="table table-success table-striped"> -->
+            <thead>
+                <tr >
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>class</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  class="table-active table-danger">
+                    <td>1001</td>
+                    <td>Rudro</td>
+                    <td>12</td>
+                    <td>rudro@gmail.com</td>
+                    <td>Dhaka</td>
+                </tr>
+                <tr >
+                    <td>1002 </td>
+                    <td>karim</td>
+                    <td>12</td>
+                    <td>karim@gmail.com</td>
+                    <td>Dhaka</td>
+                </tr>
+                <tr >
+                    <td>1003</td>
+                    <td>Rahim</td>
+                    <td> 12</td>
+                    <td>Rahim@gmail.com</td>
+                    <td>Barisal</td>
+                </tr>
+                
+            </tbody>
+
+           </table>
+  
+         <figure class="figure">
+                 <img src="images/1001 .jpg" class="figure-img img-fluid rounded" alt="...">
+                 <figcaption class="figure-caption text-center">This is an image.</figcaption>
+        </figure>
+
+
+
+           <div class="row">
+            <div class="col-6">
+           <form action="#" class="was-validated">
+
+            <div  class="mb-3">
+                <label class="form-label" for="name"> Name</label>
+                <input class="form-control" type="text" name="name" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="nitty@gmail.com" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="address" > Address</label>
+                <textarea  class="form-control" type="text" name="address" id="address" required ></textarea>
+            </div>
+           <div class="mb-3">
+            <input class="form-control-input" type="checkbox" name="check" id="check">
+            <label  class="form-check-label"for="check"> Remenber Me</label> 
+           </div>
+
+            <div class="mb-3">
+                <label for="city" class="form-select"> Select City</label>
+                <select name="city" id="city">
+                    <option value="">Select city</option>
+                    <option value="Dhaka"> Dhaka</option>
+                    <option value="rajshahi">Rajshahi</option>
+                    <option value="khulna">Khulna</option>
+                </select>
+
+            </div>
+
+
+
+
+           <div class="mb-3">
+            <input class="btn btn-danger" type="submit">
+           </div>
+
+           </form>
+           </div>
+
+           </div>
+    </div>
+
+</main>
+
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

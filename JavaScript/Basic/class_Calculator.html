@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Calculator{
+            constructor(a_value, b_value){
+                this.a = a_value;
+                this.b = b_value;
+            }
+            add(){
+                return this.a + this.b;
+            }
+            sub(){
+                return this.a - this.b;
+            }
+            mul(){
+                return this.a * this.b;
+            }
+           static div(a,b){
+                return a / b;
+            }
+        }
+        let cal = new Calculator(100,2);
+        console.log(cal.add());
+        console.log(cal.sub());
+        console.log(cal.mul());
+        
+        
+        
+       console.log(Calculator.div(90,2));
+        
+
+        class Latest_Car {
+            constructor(Name,type,Price){
+                this.name = Name;
+                this.type = type;
+                this.price = Price;
+            } 
+ //***********Abstruction******************************** 
+            engineStart(){
+                this.spark();
+                this.injectfuel();
+                this.piston();
+                console.log("Engin Started");
+            }          
+
+            spark(){
+                console.log("spark");                
+            }
+            injectfuel(){
+                console.log( "fuel injection");                
+            }
+    
+            piston(){
+                console.log("turn on piston");
+                
+            }
+    //********************************************************************
+        }
+        let Honda = new Latest_Car("Honda Civic 2025","Sedan","$25,000")
+        let Toyota = new Latest_Car( "Toyota Corolla Cross Hybrid","Hybrid SUV","$28,000")
+        let Tesla_Model = new Latest_Car("Tesla Model 3", "Electric (EV)", "$38,000") 
+       Tesla_Model.engineStart();
+        
+
+        class Animal {
+            constructor(name,avarageAge, habitat){
+                this.name = name;
+                this.age = avarageAge;
+                this.habitant = habitat;
+            }
+            speak(language){
+                return  ` ${this.name} speak in ${language}.`
+            }
+        }
+
+        let cat = new Animal("Cat","12-18","Apartment")
+        console.log(cat);
+        
+//*********************Inheritance**********************
+class Human extends Animal{
+    constructor(name,avarageAge, habitat,location,gender){
+        super(name,avarageAge, habitat)
+        this.location = location;
+        this.gender = gender;
+    }
+}
+let Khalid = new Human("Khalid","72","","Dhaka","Male");
+console.log(Khalid, Khalid.speak("Bangla, English"));
+
+//**************Polymorphism***********************
+class Pet extends Animal {
+constructor(name,avarageAge, habitat, isVaccenied,owner_name){
+    super(name,avarageAge, habitat)
+    this.isVaccenied = isVaccenied;
+    this.owner_name = owner_name;
+    }
+
+    //************Polymorphism overriding parents method*****************
+    speak(){
+        return `${this.name} barks in evening.`;
+    }
+    walk(){
+        return `${this.name} walks in park`
+    }
+
+
+
+// ********* Encapsulation*************
+setName(name){
+    this.name = name;
+}
+getName(){
+    return this.name;
+}
+//***************************************
+
+
+}
+let dog = new Pet ("Jeppes","05","Road" , true, "Ronand");
+console.log(dog);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

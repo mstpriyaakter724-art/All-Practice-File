@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Result</title>
+</head>
+
+<body>
+    <label for="input">Enter your number:</label><br>
+    <input type="number" name="" id="input"><br>
+    <button id="" onclick="sbtn()">Submit</button>
+    <h3 id="result"></h3>
+
+
+    <script>
+        function sbtn() {
+
+            let input = Number(document.getElementById("input").value);
+            let result = "";
+            if(input > 100){
+                result = "Invalid Number"
+            }
+            else if (input >= 80) {
+                result = "You got an A+"
+               
+            } else if (input >= 70) {
+                result = "You got an A";
+                
+            } else if (input >= 60) {
+                result = " You got an A-";
+                
+            } else {
+                result = "You Failed";               
+            }
+ document.querySelector("#result").innerText = `${result}`
+        }
+
+       
+    </script>
+</body>
+
+</html>

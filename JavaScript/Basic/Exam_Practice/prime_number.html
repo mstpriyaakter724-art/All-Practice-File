@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+
+   <h2>Prime Number</h2> 
+   <label for="num">Number</label>
+   <input type="number" name="num" id="num">
+   <button id="btn" onclick="abc()">Submit</button>
+   <h2 id="result"></h2>
+
+   <script>
+     function abc(){
+        let input = Number (document.querySelector("#num").value);
+        let output = document.querySelector("#result")
+    
+    function isPrime(number){
+        if(number<2){
+            return false;
+        }
+        for( let i =2; i < number; i++){
+            if( number % i == 0 ){
+                return false;
+            }
+        }return true;
+    }
+    output.innerText = isPrime(input)? ` ${input} is  a prime number`: ` ${input} is not a prime number`;
+ }
+
+
+
+
+   </script>
+</body>
+</html>

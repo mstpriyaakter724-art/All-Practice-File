@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result grade</title>
+</head>
+
+<body>
+
+    <h2>Result </h2>
+    <label for="num">Number</label>
+    <input type="number" name="num" id="num"><br>
+    <button id="btn">Submit</button>
+    <h2 id="result"></h2>
+
+    <script>
+        document.getElementById("btn").onclick = function (event) {
+            event.preventDefault()
+
+            let inputValue = Number(document.getElementById("num").value);
+            let outputValue = document.getElementById("result");
+            let r = "";
+            if (inputValue >= 80) {
+                r = "A+";
+            } else if (inputValue >= 70) {
+                r = "A";
+            } else
+                r = "B";
+
+            outputValue.innerText = (r)
+            console.log(r);
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

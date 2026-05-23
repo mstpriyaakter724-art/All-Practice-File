@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> Student Data Collection</h1>
+   <form action="index.php" method="post">
+    <label for="student_ID">student ID:</label> 
+    <input id="student_ID" type="text" required/>
+    <br/>
+    <br/>
+    <label for="name"> Name:</label>
+    <input type="text" id="name"/>
+     <br/>
+    <br/>
+    <label for="email"> Email:</label>
+<input type="email" id="email" placeholder="rajib@gmail.com" required/>
+<br/>
+<br/>
+<label for="phone"> phone</label>
+<input type="tel" placeholder="01758142365"/>
+<br/>
+<br/>
+<label for="class"> class</label>
+<select id="class">
+    <option value="CSE"> CSE</option>
+    <option value="EEE"> EEE</option>
+    <option value="MBA"> MBA</option>
+    <option value="BBA"> BBA</option>
+</select>
+<br/>
+<br/>
+<label for="subject"> subject</label>
+<input type="checkbox" value="English" name="subject"> English
+<input type="checkbox" value="Physics" name="subject"> Physics
+<input type="checkbox" value="Math" name="subject"> Math
+<input type="checkbox" value="chemisty" name="subject"> chemisty
+<br/>
+<br/>
+<label for="gender"> Gender</label>
+<label for="male"> male<input type="radio" value="male" id="male" name="gender"></label>
+<label for="female"> female<input type="radio" value="female" id="female" name="gender"></label>
+<br/>
+<br/>
+<label for="img"> Upload Image</label>
+<input type="file" id="img">
+<br/>
+<br/>
+<label for="dob">date of birth</label> 
+<input type="date" name="dob" id="dob" required>
+<br/>
+<br/>
+
+<label for="address"> Address</label>
+<textarea name="" id="address"></textarea>
+
+<br/>
+<br/>
+<input style="background-color: darkgoldenrod;" type="submit"> 
+<input type="reset">
+
+   </form> 
+</body>
+</html>

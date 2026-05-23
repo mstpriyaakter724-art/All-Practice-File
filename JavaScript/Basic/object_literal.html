@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // *************************Creating an object literal*********************************
+        let person1 = {
+            firstName: "Ashish",
+            lastName: "Mehettra ",
+            age: 23,
+            isStudent: true,
+        };
+        console.log(person1);
+
+        let person2 = {
+            firstName: "Rohit",
+            lastName: "Sharma",
+            age: 23,
+            isStudent: true,
+            fullName: function () {
+                console.log(this.firstName + " " + this.lastName);
+
+            }
+        };
+        person2.fullName();
+        person2.fullName();
+
+
+        function person3(firstName, lastName, age, isStudent) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.isStudent = isStudent;
+            this.fullName = function () {
+                console.log(` ${this.firstName} ${this.lastName}`);
+
+            }
+        }
+
+        let jayed = new person3("Jayed", "Hasan", 27, true);
+        let masud = new person3("Masud", "Hasan", 22, true);
+        jayed.fullName();
+        masud.fullName();
+        console.log(masud);
+
+
+
+
+        class Blue_print {
+            constructor(firstName, lastName, age, isStudent) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.isStudent = isStudent;
+            }
+
+            fullName() {
+                console.log(this.firstName + " " + this.lastName);
+
+            }
+        }
+
+        let khalid = new Blue_print("Khalid", "Hasan", 22, false)
+
+        khalid.fullName()
+
+        console.log(khalid);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

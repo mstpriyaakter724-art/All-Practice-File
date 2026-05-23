@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple form</title>
+</head>
+<body>
+
+     <h1 style="color: rgb(179, 63, 63);">1. Simple Contact Form</h1>
+    <fieldset>
+       
+        <legend>Simple Contact Form </legend>
+
+            <form action="">
+<label for="name"> Name</label>
+<input type="text" id="name" name="name" > <br><br>
+<label for="email"> Email</label>
+<input type="email" id="email" name="email"><br><br>
+<label for="message"> Message</label>
+<textarea  id="message" name="message"></textarea> <br><br>
+<button type="submit">Send</button>
+                
+            </form>
+     </fieldset>
+     <h1 style="color: aqua;">2. Login Form</h1>
+     <fieldset>
+        <legend>Login form</legend>
+        <form action="">
+            <label for="username" > User Name</label>
+            <input type="text" id="username" name="username"> <br><br>
+            <label for="password"> Password</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button style="background-color: rgb(179, 218, 218);" type="submit">Login</button>
+        </form>
+     </fieldset>
+
+
+
+     <h1 style="color: coral;">3. Registration Form</h1>
+     <fieldset>
+        <legend> Registration Form</legend>
+        <form action=""> 
+            <label for="firstname"> First Name</label>
+            <input type="text" id="firstname" name="firstname"><br><br>
+            <label for="lastname"> Last Name</label>
+            <input type="text" id="lastname" name="lastname"><br><br>
+            <label for="email"> Email</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="password"> Password</label>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="dob"> Date of Birth</label>
+            <input type="date" id="dob" name="dob"><br><br>
+           <button style="background-color: rgb(190, 226, 202);" type="submit">Register</button>
+        </form>
+     </fieldset>
+
+
+
+     <form action="">
+        <h1 style="color: rgb(218, 87, 108);">4. Feedback form with Dropdown and Radio Buttons</h1>
+     <fieldset>
+        <legend>Simple Contact form</legend>
+        <label for="name"> Name</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="text" > How did you hear about us?</label><br>
+        <select name="text" id="text">
+            <option value="Friend"> Friend</option>
+            <option value=" Google"> Google</option>
+            <option value="Facebook"> Facebook </option>
+
+        </select><br><br>
+        <label for="rate"> Rate our service</label><br>
+        <label for="excllent">
+        <input type="radio" id="excllent" name="excllent" value="excllent"> Excellent
+        </label> <br>
+        <label for="good">
+        <input type="radio" id="good" name="good" value="good"> Good 
+        </label><br>
+        <label for="poor">
+         <input type="radio" id="poor" name="poor" value="poor"> Poor
+         </label> <br><br>
+         <button style="background-color: rgb(223, 151, 223);" submit>Submit Feedback</button>
+     </form>
+
+     </fieldset>
+
+
+     <form action=""> 
+
+        <h1 style="color: rgb(96, 127, 230);">Student Registration Form</h1>
+     <label for="name"> Full Name</label><br>
+     <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+     <label for="email"> Email</label><br>
+     <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+     <label for="password"> Password</label><br>
+     <input type="password" id="password" name="password"><br><br>
+     <label for="age"> Age</label><br>
+     <input type="number" name="age" id="age"><br><br>
+     <label for="dob"> Date of Birth</label><br>
+     <input type="date" name="dob" id="dob"><br> <br>
+     <label for="gender">Gender</label><br>
+     <label for="male">
+        <input type="radio" name="male" id="male" value="male"> Male
+     </label>
+    <label for="female">
+        <input type="radio" name="male" id="female" value="female"> Female
+     </label>
+      <label for="other">
+        <input type="radio" name="male" id="other" value="other"> Other
+     </label><br> <br>
+     <label for="skills"> Skills</label><br>
+     <label for="html">
+     <input type="checkbox" name="html" id="html" value="HTML"> HTML
+     </label>
+     <label for="css">
+     <input type="checkbox" name="css" id="css" value="CSS"> CSS
+     </label>
+     <label for="javasript">
+     <input type="checkbox" name="javasript" id="javasript" value="JavaScript"> JavaScript
+     </label><br><br>
+     <label for="country"> Country</label>
+     <select name="country" id="country">
+         <option value="Bangladesh"> Bangladesh</option>
+         <option value="Japan">Japan</option>
+          <option value="China"> China</option>
+           <option value="USA">USA</option>
+     </select><br><br>
+     <label for="address"> Address </label><br>
+     <textarea name="address" id="address"></textarea><br><br>
+
+     
+     <label for="upcv">Upload CV</label><br>
+     <input type="file" name="filr" id="upcv"><br><br>
+     <label for="fcolur"> Favourite Colour</label><br>
+     <input type="color" name="color" id="fcolour"><br><br>
+     <label for="range"> Experience (0-10)</label><br>
+     <input type="range" id="range" name="range" max="10" min="0"><br><br>
+    <button style="background-color: rgb(136, 221, 224);" type="submit"> Submit</button>
+    <button type="reset" style="background-color: rgb(218, 151, 231);">Reset</button>
+     </form>
+     
+
+
+
+</body>
+</html>

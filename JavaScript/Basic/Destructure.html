@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            firstName : "John",
+            lastName : "Doe",
+            age : 25,
+            isStudent: true,
+            hobbies :  ["Reading", "Coding", "Sleeping"],
+            address : {
+                street: " 123 Main St",
+                city : "New York",
+                zip : "10001"
+            },
+            fullName : function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        const {firstName,lastName,age,isStudent,hobbies,address:{street,city,zip},fullName } = person;
+        console.log(hobbies [1  ]);
+        
+    </script>
+</body>
+</html>

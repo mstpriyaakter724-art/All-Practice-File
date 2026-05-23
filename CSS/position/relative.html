@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative</title>
+        <style>
+            .box_relative{
+                height:135px ;
+                width: 250px;
+                background-color: green;
+                position: relative;
+            }
+            .box_absolute{
+                height: 75px;
+                width: 75px;
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+
+     </style>
+</head>
+<body>
+    <div class="box_relative">
+    <div class="box_absolute"></div>
+    </div>
+    
+</body>
+</html>

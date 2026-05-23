@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            padding: .5rem;
+            text-align: center;
+            border-collapse: collapse;
+           
+        }
+        table{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+  <h1 >HTML Table Practice</h1>
+        
+          <p style="background-color: rgb(215, 234, 240);">1. student reasult Table</p>   
+        <table>
+           
+                <tr>
+                    <th rowspan="2">Student Name</th>
+                    <th colspan="2">Math</th>
+                    <th colspan="2">Science</th>
+                    <th rowspan="2">Total</th>
+                    <th rowspan="2">Gread</th>
+                    
+                </tr>
+                <tr>
+                    <th>Therory</th>
+                    <th> practical</th>
+                    <th>Therory</th>
+                    <th>practical</th>
+                    <!-- <th></th>
+                    <th></th>
+                    <th></th> -->
+                </tr>
+
+            
+           
+                <tr>
+                    <td>Rahim</td>
+                    <td>80</td>
+                    <td>15</td>
+                    <td>70</td>
+                    <td>20</td>
+                     <td>185</td>
+                    <td>A</td>
+                </tr>
+            
+        </table>
+
+
+     <p style="background-color: rgb(215, 234, 240);"> 2. Weekly Class Routine</p>
+     <table>       
+            <tr>
+                <th>Time</th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+            </tr>
+            <tr>
+                <td>9-10</td>
+                <td rowspan="2" >Math</td>
+                <td>English</td>
+                <td>ICT</td>
+            </tr>
+             <tr>
+                <td>10-11</td>
+                <!-- <td>math</td> -->
+                <td rowspan="2">Physics</td>
+                <td>Biology</td>
+                
+            </tr>
+             <tr>
+                <td>11-12</td>
+                <td>Bangla</td>
+                <td>Chemistry</td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+             <tr>
+                <td>12-1</td>
+                <td colspan="3" style="text-align: center;">Break</td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+        
+     </table>
+      
+     <p style="background-color: rgb(215, 234, 240);">3. Invoice Table</p>
+     <table >
+        <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>2</td>
+            <td>500</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>keyboard</td>
+            <td>1</td>
+            <td>800</td>
+            <td>800</td>
+        </tr>
+        <tr>
+            <td colspan="3">Grand Total</td>
+            <td>1800</td>
+            
+        </tr>
+        
+     </table>
+   
+
+
+    
+     <form action="">
+            <h1>Student Registration Form</h1>
+        <fieldset>
+                 <legend>Personal Informatiion</legend>
+
+          <label for="name"> Full Name</label>
+            <input type="text" name="name" id="name"><br><br>
+
+           <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password"><br><br>
+
+            <label for="phone"> Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="01XXXXXXXXX"><br><br>
+
+            <label for="dob"> Date of Birth</label>
+            <input type="date" name="dob" id="dob"><br><br>
+
+            <label for="age">Age</label>
+            <input type="text" name="age" id="age"><br><br>
+
+            <label for="gender"> Gender</label>
+            <label for="female"> 
+            <input type="radio" name="gender" id="female" value="female"> Female
+            </label>
+             <label for="male"> 
+            <input type="radio" name="gender" id="male" value="male"> Male
+            </label>
+
+        </fieldset>
+        
+<fieldset>
+             <legend>Education</legend>
+    <label for="dep"> Department</label>
+         <select name="dep" id="dep">
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="MA">MA</option>
+    </select><br><br>
+
+    <label for="skil">Slills</label>
+        <label for="html">
+            <input type="checkbox" id="html" value="HTML">HTML</label>
+         <label for="css">
+             <input type="checkbox" id="css" value=" CSS">CSS</label>
+         <label for="javasript">
+             <input type="checkbox" id="javasript" value="javascript">javascript</label><br><br>
+             <label for="upcv">Upload CV</label>
+             <input type="file" name="upcv" id="upcv">
+
+</fieldset>
+
+</form>
+
+</body>
+</html>

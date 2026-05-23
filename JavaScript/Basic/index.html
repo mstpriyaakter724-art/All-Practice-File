@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <button onclick="alert ('Hello Man')">Click</button>
+    <button onclick="confirm(' are you sure?')">Send</button>
+    <p id="myPtag"></p>
+   
+    <p id="isStudentID"></p>
+
+
+    <label for="myname">Name</label>
+    <input type="text" id="myname"><br><br>
+     
+
+    <label for="myage">Age</label>
+    <input type="number" id="myage"><br><br>
+    <button id="btn">submit</button>
+    <p id="name"></p>
+    <p id="age"></p>
+   
+    
+    <script>
+        document.getElementById("myPtag").innerText=`Hello Batch 71` ;
+        alert("Hello everyone");
+        console.log(" Hello Angle!");
+
+        let name =`Hasan`;
+        let age= 22;
+        let isStudent= true;
+        document.getElementById("name").innerText=`My name is ${name}.` ;
+        document.getElementById("age").innerText= `I am ${age} years old.`;
+        document.getElementById("isStudentID").innerText= ` Are I student ${isStudent}.`;
+
+        console.log( typeof name );
+        console.log( typeof age);
+        console.log( typeof isStudent );
+
+
+        let nameinput = prompt("Enter your name ");
+        console.log( nameinput);
+        
+
+        document.getElementById("btn").onclick=function
+        ()
+        {
+           
+            let n = document.getElementById("myname").value;
+            document.getElementById("name").innerText=`My name is ${n}.`;
+
+             let a = document.getElementById("myage").value;
+             document.getElementById("age").innerText=`I am  ${a} years old.`;
+
+             console.log(n, a);
+             
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <?php
-class student
+class Student
 {
     public $id;
     public $name;
@@ -7,7 +7,7 @@ class student
     public $gender;
     public $mobile;
 
-    public function ___construct($_id, $_name, $_email, $_gender, $_mobile)
+    public function __construct($_id, $_name, $_email, $_gender, $_mobile)
     {
 
         $this->id = $_id;
@@ -20,15 +20,15 @@ class student
 
     function save()
     {
-        $data = PHP_EOL . "$this->id, $this->name, $this->email,$this->gender, $this->mobile";
-        file_put_contents("students_data.txt", $data, FILE_APPEND);
-        //         print_r($data);
+        $data = PHP_EOL . "$this->id,$this->name,$this->email,$this->gender,$this->mobile";
+        file_put_contents("Students_data.txt", $data, FILE_APPEND);
+        // print_r($data);
     }
 
 
     static function find($_id)
     {
-        $data = file("students_data.txt");
+        $data = file("Students_data.txt");
         $result = "";
         foreach ($data as $key => $value) {
             list($sid, $name, $email, $gender, $mobile)= explode(",", $value);
@@ -46,7 +46,7 @@ class student
 
     static function show()
     {
-        $data = file("students_data.txt");
+        $data = file("Students_data.txt",FILE_SKIP_EMPTY_LINES| FILE_IGNORE_NEW_LINES);
         $html = "
             <table class='table'>
                     <thead>
@@ -81,11 +81,17 @@ class student
                     </tbody>
                 </table>";
     }
+
+
+//     public function __toString()
+//     {
+//        echo  "$this->id,$this->name,$this->email,$this->gender,$this->mobile";
+//     }
 }
 
-$student = new student(9,"Rasel","rasel@gmail.com", "male", "018905678435");
+// $student = new Student(9,"Rasel","rasel@gmail.com", "male", "018905678435");
 // $student->save();
-// print_r(student::find(4));
+// print_r($student);
 ?>
 
 

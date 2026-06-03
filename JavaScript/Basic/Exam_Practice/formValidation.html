@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form action="#" id="form" name="form" style="width: 400px; margin: 0 auto;">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" onblur="nameValidation()"><br>
+            <span id="nameMessege"></span>
+        </div><br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" onblur="emailValidation()"><br>
+            <span id="emailMessege"></span>
+        </div><br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" onblur="passValidation()">
+            <span style="cursor: pointer;" onclick="shohwPassword()">&#x1F441;</span><br>
+            <span id="passwordMessage"></span>
+        </div><br>
+        <div>
+            <label for="city">City:</label>
+            <select name="city" id="city">
+                <option value="Dhaka">Dhaka</option>
+                <option value="Khulna">Khulna</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Barishal">Barishal</option>
+            </select>
+        </div><br>
+        <div class="checkbox">
+            <label for="">Gender:</label><br>
+            <label for="male">Male
+                <input type="radio" name="gender" id="male" value="Male" checked>
+            </label>
+            <label for="female">Female
+                <input type="radio" name="gender" id="female" value="Female">
+            </label>
+        </div><br>
+        <div>
+            <label for="subject">Subject: <br>
+                <label for="Bangla">Bangla
+                    <input type="checkbox" name="subject" id="Bangla" value="Bangla">
+                </label>
+                <label for="English">English
+                    <input type="checkbox" name="subject" id="English" value="English">
+                </label>
+                <label for="Math">Math
+                    <input type="checkbox" name="subject" id="Math" value="Math">
+                </label>
+                <label for="ICT">ICT
+                    <input type="checkbox" name="subject" id="ICT" value="ICT">
+                </label>
+            </label>
+        </div><br>
+        <div>
+            <label for="comment">Comment:</label><br>
+            <textarea name="comment" id="comment"></textarea>
+        </div><br>
+        <div>
+            <input type="submit" name="" id="">
+        </div>
+    </form>
+
+
+
+    <script>
+        function nameValidation() {
+            let name = document.getElementById("name");
+            let nameMessege = document.getElementById("nameMessege");
+            let pattern = /^[a-zA-Z. ]{3,}$/;
+
+            if (pattern.test(name.value)) {
+                nameMessege.innerText = "Valid Name";
+                nameMessege.style.color = "forestgreen";
+            } else {
+                nameMessege.innerText = "Invalid Name";
+                nameMessege.style.color = "crimson";
+            }
+        }
+
+        function emailValidation() {
+            let email = document.getElementById("email");
+            let emailMessege = document.getElementById("emailMessege");
+            let pattern = /^[a-z0-9_]{3,}[@][a-z]{3,}[.][a-z]{2,}$/;
+
+            if (pattern.test(email.value)) {
+                emailMessege.innerText = "Valid email";
+                emailMessege.style.color = "forestgreen";
+            } else {
+                emailMessege.innerText = "Invalid email";
+                emailMessege.style.color = "crimson";
+            }
+        }
+
+        function passValidation(){
+            let password = document.getElementById("password");
+            let passwordMessage = document.getElementById("passwordMessage");
+            let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+
+            if(pattern.test(password.value)){
+                passwordMessage.innerText = "Valid password";
+                passwordMessage.style.color = "forestgreen";
+            } else {
+                passwordMessage.innerText = "Invalid password";
+                passwordMessage.style.color = "crimson";
+            }
+        }
+
+
+        function shohwPassword(){
+           let password = document.getElementById("password");
+           if(password.type === "password"){
+            password.type = "text";
+           }else{
+            password.type = "password";
+           }
+        }
+
+
+        let form = document.getElementById("form");
+        form.onsubmit = function (e) {
+            e.preventDefault()
+            let name = form.name.value;
+            let email = form.email.value;
+            let password= form.password.value;
+            let city = form.city.value;
+
+            let gender = form.gender;
+            let selected_gender = "";
+
+            let subjects = form.subject;
+            let selected_subject = "";
+            let comment = form.comment.value;
+
+            for (g of gender) {
+                if (g.checked) {
+                    selected_gender = g.value;
+                }
+            }
+
+            for (s of subjects) {
+                if (s.checked) {
+                    selected_subject += s.value + " ";
+                }
+            }
+            let w = window.open("", "_blank", "width= 400,height=400");
+            w.document.write(`
+            
+            <div>
+                <h3>Name: ${name}</h3>
+                <p>Email: ${email}</p>
+                <p>Password: ${password}</p>
+                <p>City: ${city}</p>
+                <p>Gender: ${selected_gender}</p>
+                <p>Subjects: ${selected_subject}</p>
+                <p>comment: ${comment}</p>
+            </div>
+        <div>
+            <button onclick="self.close()">Close</button>
+            <button onclick="print()">Print</button>
+        </div>
+            
+            `)
+        }
+    </script>
+</body>
+
+</html>

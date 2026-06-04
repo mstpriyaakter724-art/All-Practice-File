@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Number</title>
+</head>
+
+<body>
+    <div>
+        <label for="num1">Enter 1st Number:</label>
+        <input type="text" name="" id="num1">
+    </div><br>
+    <div>
+        <label for="num2">Enter 2nd Number:</label>
+        <input type="text" name="" id="num2">
+    </div><br>
+    <div>
+        <label for="num3">Enter 3rd Number:</label>
+        <input type="text" name="" id="num3">
+    </div><br>
+    <button onclick="sbtn()">Submit</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function sbtn() {
+            let num1 = Number(document.querySelector("#num1").value);
+            let num2 = Number(document.querySelector("#num2").value);
+            let num3 = Number(document.querySelector("#num3").value);
+            let result = "";
+
+        //     if (num1 > num2) {
+
+        //         if (num1 > num3) {
+        //             result = `${num1} is maximum number among ${num1}, ${num2} & ${num3}`
+        //         }
+        //          else {
+        //             result = `${num3} is maximum number among ${num1}, ${num2} & ${num3}`
+        //         }
+        //     }
+        //     else if (num2 > num3) {
+
+        //         if (num2 > num1) {
+        //             result = `${num2} is maximum number among ${num1}, ${num2} & ${num3}`
+        //         }
+        //          else {
+        //             result = `${num1} is maximum number among ${num1}, ${num2} & ${num3}`
+        //         }
+        //     }
+        //     else {
+        //         result = `${num3} is maximum number among ${num1}, ${num2} & ${num3}`
+        //     }
+        //     document.querySelector("#result").innerText = result;
+        // }
+
+        
+            if (num1 > num2) { //25,20,5
+
+                if (num1 > num3) {
+                    result = `${num1} is maximum number among ${num1}, ${num2} & ${num3}`
+                }
+                 else {
+                    result = `${num3} is maximum number among ${num1}, ${num2} & ${num3}`
+                }
+            }
+            else if (num2 > num3) {
+
+                if (num2 > num1) {
+                    result = `${num2} is maximum number among ${num1}, ${num2} & ${num3}`
+                }
+                 else {
+                    result = `${num1} is maximum number among ${num1}, ${num2} & ${num3}`
+                }
+            }
+            else {
+                result = `${num3} is maximum number among ${num1}, ${num2} & ${num3}`
+            }
+            document.querySelector("#result").innerText = result;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

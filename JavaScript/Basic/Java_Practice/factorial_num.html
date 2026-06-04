@@ -6,6 +6,17 @@
     <title>Factorial Number</title>
 </head>
 <body>
+  <script>
+    function factorial(fnum){
+       
+        let result = 1;
+        for (let i=1; i<= fnum; i++){
+            result *= i;
+        }
+       document.write( `<h2> The factorial number of ${fnum} is ${result}. </h2>`);
+    }
     
+    factorial(Number(prompt( "Enter a number")))
+  </script>  
 </body>
 </html>

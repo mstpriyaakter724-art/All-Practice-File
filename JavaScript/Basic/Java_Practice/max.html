@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <div>
+        <label for="num1">Enter 1st Number:</label>
+        <input type="text" name="" id="num1">
+    </div><br>
+    <div>
+        <label for="num2">Enter 2nd Number:</label>
+        <input type="text" name="" id="num2">
+    </div><br>
+    <div>
+        <label for="num3">Enter 3rd Number:</label>
+        <input type="text" name="" id="num3">
+    </div><br>
+    <button onclick="sbtn()">Submit</button>
+
+    <h3 id="result"></h3>
+
+
+
+    <script>
+        function sbtn(){
+            let first =Number (document.querySelector("#num1").value);
+            let second = Number(document.querySelector("#num2").value);
+            let third = Number(document.querySelector("#num3").value);
+            let result = document.querySelector("#result")
+
+            if(first > second){
+                if(first > third){
+                    result = ` ${first} is maximum number among ${first}, ${second} & ${third}`
+                }else {
+                     result = ` ${third} is maximum number among ${first}, ${second} & ${third}`
+                }
+            }else if (second > third){
+                if(second > first){
+                     result = ` ${second} is maximum number among ${first}, ${second} & ${third}`
+                }else{
+                     result = ` ${first} is maximum number among ${first}, ${second} & ${third}`
+                }
+            }else{
+                 result = ` ${third} is maximum number among ${first}, ${second} & ${third}`
+            }
+
+            document.querySelector("#result").innerText = `${result}`
+            
+        }
+
+
+
+    </script>
+</body>
+</html>
